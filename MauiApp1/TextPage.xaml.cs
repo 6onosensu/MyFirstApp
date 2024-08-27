@@ -4,8 +4,10 @@ public partial class TextPage: ContentPage
 {
 	Label lbl;
 	Editor editor;
-	Button btn_back;
-	public TextPage()
+	Button btn_back, btn_next, btn_home;
+	HorizontalStackLayout hsl;
+    List<string> btns = new List<string> { "BACK", "HOME", "NEXT" };
+    public TextPage()
 	{
 		lbl = new Label
 		{
@@ -19,23 +21,30 @@ public partial class TextPage: ContentPage
 			PlaceholderColor = Color.FromRgb(50, 100, 100),
 			TextColor = Color.FromRgb(10, 50, 200),
 		};
-		VerticalStackLayout vst = new VerticalStackLayout
-		{
-			Children =
-		};
 
-        List<string> btns = new List<string> { "", "" };
-        for (int i = 0; i < btns.Count; i++)
+		hsl = new HorizontalStackLayout { };
+        for (int i = 0; i < 3; i++)
         {
-            Button btn = new Button
+            Button b = new Button
             {
                 Text = btns[i],
-                BackgroundColor = Color.FromRgb(20, 100, 200),
-                TextColor = Color.FromRgb(10, 20, 15),
-                FontFamily = "Hey Comic",
-                BorderWidth = 10,
                 ZIndex = i
             };
+			hsl.Add(b);
+            b.Clicked += Btn_Clicked;
         }
+
+        VerticalStackLayout vst = new VerticalStackLayout
+        {
+            Children = { lbl, editor, hsl }
+        };
+		Content = vst;
+
     }
+
+    private async void Btn_Clicked(object? sender, EventArgs e)
+    {
+        btn_back = (Button)sender;
+    }
+
 }
