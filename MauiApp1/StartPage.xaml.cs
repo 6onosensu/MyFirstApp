@@ -8,7 +8,6 @@ public partial class StartPage : ContentPage
     VerticalStackLayout vst;
     public StartPage()
     {
-        //InitializeComponent();
         vst = new VerticalStackLayout { BackgroundColor = Color.FromRgb(180, 100, 20) };
         for (int i = 0; i < pages.Count; i++)
         {
