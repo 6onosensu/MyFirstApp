@@ -2,8 +2,8 @@ namespace MauiApp1;
 
 public partial class StartPage : ContentPage
 {
-    List<ContentPage> pages = new List<ContentPage>() { new TextPage(), new FigurePage() };
-    List<string> txt = new List<string> { "Open the TextPage", "Open Figure" };
+    List<ContentPage> pages = new List<ContentPage>() { new TextPage(), new FigurePage(), new DateTimePage() };
+    List<string> txt = new List<string> { "Open the TextPage", "Open Figure", "Stepper, Slider.." };
     ScrollView sv;
     VerticalStackLayout vst;
     public StartPage()
