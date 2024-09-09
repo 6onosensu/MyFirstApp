@@ -2,7 +2,7 @@
 
 namespace MauiApp1
 {
-    public class DateTimePage : ContentPage
+    public partial class DateTimePage : ContentPage
     {
         Label lbl;
         DatePicker dp;

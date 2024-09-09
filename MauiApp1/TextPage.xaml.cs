@@ -7,7 +7,7 @@ public partial class TextPage: ContentPage
 	Button btn_back, btn_next, btn_home;
 	HorizontalStackLayout hsl;
     List<string> btns = new List<string> { "BACK", "HOME", "NEXT" };
-    public TextPage()
+    public TextPage( int k)
 	{
 		lbl = new Label
 		{
