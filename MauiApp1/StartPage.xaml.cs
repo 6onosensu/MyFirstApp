@@ -8,13 +8,18 @@ public partial class StartPage : ContentPage
         new FigurePage(1),
         new DateTimePage(2),
         new StepperSliderPage(3),
+        new Frame_Page(4),
+        new Image_Page(5),
     };
     List<string> txt = new List<string> 
     { 
-        "Open the TextPage", 
-        "Open Figure", 
+        "Text Page", 
+        "Figure Page", 
         "Date and Time", 
-        "Stepper and Slider" };
+        "Stepper and Slider",
+        "Frame Page",
+        "Image Page",
+    };
     ScrollView sv;
     VerticalStackLayout vst;
     public StartPage()
