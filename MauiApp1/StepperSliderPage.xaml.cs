@@ -1,6 +1,6 @@
 ﻿namespace MauiApp1
 {
-    public partial class StepperSliderPage : ContentView
+    public partial class StepperSliderPage : ContentPage
     {
         Label lbl;
         Slider sl;
